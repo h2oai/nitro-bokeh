@@ -5,7 +5,7 @@ apps.
 
 ## Demo
 
-Source: [example/app.py](example/app.py).
+[View source](example).
 
 ![Demo](demo.gif)
 
