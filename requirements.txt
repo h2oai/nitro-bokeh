@@ -1,0 +1,7 @@
+setuptools
+wheel
+twine
+bokeh
+h2o-nitro>=0.8.1
+flake8==4.0.1
+pytest==7.0.1
