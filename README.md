@@ -17,9 +17,9 @@ pip install h2o-nitro-bokeh
 
 ## Usage
 
-1. Import `bokeh_plugin` and `boken_box` from `h2o_nitro_bokeh`.
+1. Import `bokeh_plugin` and `bokeh_box` from `h2o_nitro_bokeh`.
 2. Add `bokeh_plugin()` to your Nitro app.
-3. Use `boken_box(model)` to render Bokeh models (figures, widgets, and so on).
+3. Use `bokeh_box(model)` to render Bokeh models (figures, widgets, and so on).
 
 
 ```py 
