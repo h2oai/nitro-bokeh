@@ -38,7 +38,7 @@ setup(
     python_requires=">=3.7",
     install_requires=[
         "bokeh",
-        "h2o-nitro>=0.8.1",
+        "h2o-nitro>=0.8.2",
     ],
     license_files=('LICENSE',),
     classifiers=[
