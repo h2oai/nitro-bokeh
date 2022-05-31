@@ -1,6 +1,6 @@
 # Bokeh plugin for H2O Nitro
 
-This plugin lets you use [Bokeh](https://docs.bokeh.org/en/latest/) visualizations in [Nitro](https://nitro.h2o.ai)
+This plugin lets you use [Bokeh](https://docs.bokeh.org/en/latest/) visualizations in [Nitro](https://github.com/h2oai/nitro)
 apps.
 
 ## Demo
