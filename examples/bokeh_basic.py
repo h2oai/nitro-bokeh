@@ -1,3 +1,30 @@
+# Run this example easily with "nitro run URL".
+# Get the nitro CLI: https://nitro.h2o.ai/cli/
+#
+# Like Nitro? Please star us on Github: https://github.com/h2oai/nitro
+#
+# ===
+# About: How to use Bokeh in Nitro apps
+# Author: Prithvi Prabhu <prithvi.prabhu@gmail.com>
+# License: Apache-2.0
+# Source: https://github.com/h2oai/nitro-bokeh/examples
+# Keywords: [visualization]
+#
+# Setup:
+# FILE requirements.txt EOF
+# bokeh
+# numpy
+# pandas
+# Flask>=2
+# simple-websocket>=0.5
+# h2o-nitro>=0.8.2
+# h2o-nitro-bokeh>=0.1
+# EOF
+# RUN python -m pip install -r requirements.txt
+# ENV FLASK_APP bokeh_basic.py
+# ENV FLASK_ENV development
+# START python -m flask run
+# ===
 import numpy as np
 import pandas as pd
 import simple_websocket
