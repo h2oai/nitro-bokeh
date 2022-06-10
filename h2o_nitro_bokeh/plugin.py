@@ -52,4 +52,4 @@ def bokeh_box(model: Model) -> Box:
     :return: A box
     """
     # Render the box using our custom embed() function defined in the "bokeh" plugin.
-    return box(mode='plugin:bokeh.embed', data=dict(model=json.dumps(json_item(model))))
+    return box(mode='plugin:bokeh.embed', data=dict(model=json.dumps(json_item(model))), ignore=True)
