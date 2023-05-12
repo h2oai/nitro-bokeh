@@ -13,11 +13,14 @@
 # limitations under the License.
 
 import json
-from bokeh.util.version import __version__ as bokeh_version
-from bokeh.model import Model
-from bokeh.embed import json_item
+from typing import Optional
 
+from bokeh.embed import json_item
+from bokeh.model import Model
+from bokeh.util.version import __version__ as bokeh_version
 from h2o_nitro import box, Box, Plugin, Script
+
+bokeh_js_cdn_path = f'https://cdnjs.cloudflare.com/ajax/libs/bokeh/{bokeh_version}/bokeh.min.js'
 
 # Javascript function for embedding the Bokeh plot.
 # See: http://docs.bokeh.org/en/latest/docs/user_guide/embed.html#json-items
@@ -29,7 +32,7 @@ exports.embed = (context, element, data) => {
 '''
 
 
-def bokeh_plugin():
+def bokeh_plugin(bokeh_js_path: Optional[str] = None):
     """
     Creates a Nitro plugin for the currently installed version of Bokeh.
     :return: A plugin
@@ -38,7 +41,7 @@ def bokeh_plugin():
         name='bokeh',
         scripts=[
             # Install the Bokeh library.
-            Script(source=f'https://cdnjs.cloudflare.com/ajax/libs/bokeh/{bokeh_version}/bokeh.min.js'),
+            Script(source=bokeh_js_path or bokeh_js_cdn_path),
             # Install our custom Bokeh-embedding Javascript.
             Script(source=_bokeh_embed_js, type='inline'),
         ],
